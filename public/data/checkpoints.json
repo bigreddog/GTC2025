@@ -1,0 +1,20 @@
+[
+  { "id": 1, "name": "Courmayeur (Start)" },
+  { "id": 2, "name": "Rifugio Pavillon" },
+  { "id": 3, "name": "La Palud" },
+  { "id": 4, "name": "Rifugio Bertone" },
+  { "id": 5, "name": "Rifugio Bonatti" },
+  { "id": 6, "name": "Arnouva" },
+  { "id": 7, "name": "Rifugio Elena" },
+  { "id": 8, "name": "Col Ferret" },
+  { "id": 9, "name": "La Fouly" },
+  { "id": 12, "name": "Champex-Lac" },
+  { "id": 13, "name": "La Giète" },
+  { "id": 14, "name": "Trient" },
+  { "id": 15, "name": "Les Tseppes" },
+  { "id": 16, "name": "Vallorcine" },
+  { "id": 17, "name": "La Flégère" },
+  { "id": 18, "name": "Chamonix" },
+  { "id": 19, "name": "Les Houches" },
+  { "id": 20, "name": "Courmayeur (Finish)" }
+]

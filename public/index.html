@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gran Trail Courmayeur 2025 - Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Gran Trail Courmayeur 2025 (100km) - Explorer</h1>
+    </header>
+    <main>
+        <section id="search-section">
+            <h2>Search & Compare Entrants</h2>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search by name, surname, or bib..." autocomplete="off">
+                <div id="search-results" class="dropdown"></div>
+            </div>
+
+            <div id="selected-entrants-container">
+                <h3>Selected Entrants:</h3>
+                <ul id="selected-entrants-list"></ul>
+                <button id="compare-btn" disabled>Compare Selected</button>
+                <button id="clear-btn">Clear All</button>
+            </div>
+        </section>
+
+        <section id="visualization-section" class="hidden">
+            <h2>Comparison Visualization</h2>
+            <div id="chart-container">
+                <div id="chart-legend"></div>
+                <div id="chart"></div>
+            </div>
+        </section>
+
+        <section id="details-section" class="hidden">
+            <h2>Detailed Checkpoint Times</h2>
+            <div id="table-container"></div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

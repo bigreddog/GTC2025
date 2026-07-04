@@ -1,0 +1,327 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --background-color: #f5f6fa;
+    --text-color: #333;
+    --border-color: #e1e8ed;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Search Bar */
+.search-container {
+    position: relative;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+#search-input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-top: none;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 10;
+    display: none;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 0 0 8px 8px;
+}
+
+.dropdown-item {
+    padding: 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: var(--accent-color);
+}
+
+/* Selected Entrants */
+#selected-entrants-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.selected-entrant {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+}
+
+.remove-btn {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    margin-left: 0.8rem;
+    cursor: pointer;
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: background-color 0.2s;
+}
+
+.remove-btn:hover {
+    background: rgba(255,255,255,0.4);
+}
+
+/* Buttons */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-right: 1rem;
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--secondary-color);
+    transform: translateY(-1px);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+#clear-btn {
+    background-color: #e74c3c;
+}
+#clear-btn:hover {
+    background-color: #c0392b;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Chart Styles */
+#chart-container {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.chart-row {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.chart-label {
+    width: 180px;
+    font-weight: 600;
+    flex-shrink: 0;
+    padding-right: 15px;
+    line-height: 1.2;
+}
+
+.chart-bar-container {
+    flex-grow: 1;
+    background-color: #ecf0f1;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.chart-segment {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    overflow: hidden;
+    transition: width 0.5s ease-out, filter 0.2s;
+    border-right: 1px solid rgba(255,255,255,0.3);
+    cursor: pointer;
+}
+
+.chart-segment:last-child {
+    border-right: none;
+}
+
+.chart-segment:hover {
+    filter: brightness(1.1);
+}
+
+.chart-segment:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: -35px;
+    left: auto;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 100;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    pointer-events: none;
+}
+
+#chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Table Styles */
+#table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+    min-width: 800px;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+tr:hover td {
+    background-color: #fcfcfc;
+}
+
+td strong {
+    color: var(--primary-color);
+}
+
+td small {
+    color: #7f8c8d;
+}
