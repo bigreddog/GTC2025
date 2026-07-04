@@ -1,4 +1,3 @@
-
 function escapeHtml(unsafe) {
     return (unsafe || '').toString()
          .replace(/&/g, "&amp;")
@@ -10,15 +9,14 @@ function escapeHtml(unsafe) {
 
 const state = {
     entrants: [],
-    results: [],
     checkpoints: [],
-    selectedEntrants: [],
-    colors: ['#e74c3c', '#f1c40f', '#2ecc71', '#9b59b6', '#e67e22', '#1abc9c', '#34495e', '#7f8c8d', '#2c3e50', '#8e44ad', '#d35400', '#27ae60']
+    processedData: []
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
     await loadData();
-    setupEventListeners();
+    processAndRender();
+    setupSearch();
 });
 
 async function loadData() {
@@ -32,17 +30,17 @@ async function loadData() {
         const iscrittiData = await iscrittiRes.json();
         const classificheData = await classificheRes.json();
 
-        state.entrants = iscrittiData.iscritti || [];
-        state.results = classificheData[0].result || [];
+        let entrants = iscrittiData.iscritti || [];
+        const results = classificheData[0].result || [];
         state.checkpoints = await checkpointsRes.json();
 
-        // Match results to entrants
         const resultsMap = new Map();
-        state.results.forEach(r => resultsMap.set(r.bib, r));
+        results.forEach(r => resultsMap.set(r.bib, r));
 
-        state.entrants = state.entrants.filter(e => resultsMap.has(Number(e.pettorale))).map(e => ({
+        // Keep all entrants, attach results if they exist
+        state.entrants = entrants.map(e => ({
             ...e,
-            result: resultsMap.get(Number(e.pettorale))
+            result: resultsMap.get(Number(e.pettorale)) || null
         }));
 
     } catch (err) {
@@ -50,89 +48,6 @@ async function loadData() {
         alert("Failed to load race data.");
     }
 }
-
-function setupEventListeners() {
-    const searchInput = document.getElementById('search-input');
-    const searchResults = document.getElementById('search-results');
-    const compareBtn = document.getElementById('compare-btn');
-    const clearBtn = document.getElementById('clear-btn');
-
-    searchInput.addEventListener('input', (e) => {
-        const term = e.target.value.toLowerCase().trim();
-        if (term.length < 2) {
-            searchResults.style.display = 'none';
-            return;
-        }
-
-        const matches = state.entrants.filter(entrant => {
-            const fullName = `${entrant.nome} ${entrant.cognome}`.toLowerCase();
-            const bib = String(entrant.pettorale);
-            return fullName.includes(term) || bib.includes(term);
-        }).slice(0, 10);
-
-        if (matches.length > 0) {
-            searchResults.innerHTML = matches.map(m => `
-                <div class="dropdown-item" data-bib="${m.pettorale}">
-                    ${m.nome} ${m.cognome} (Bib: ${m.pettorale})
-                </div>
-            `).join('');
-            searchResults.style.display = 'block';
-        } else {
-            searchResults.innerHTML = '<div class="dropdown-item">No matches found</div>';
-            searchResults.style.display = 'block';
-        }
-    });
-
-    searchResults.addEventListener('click', (e) => {
-        const item = e.target.closest('.dropdown-item');
-        if (item && item.dataset.bib) {
-            const bib = item.dataset.bib;
-            const entrant = state.entrants.find(en => String(en.pettorale) === bib);
-            if (entrant && !state.selectedEntrants.find(se => se.pettorale === entrant.pettorale)) {
-                state.selectedEntrants.push(entrant);
-                updateSelectedUI();
-            }
-            searchInput.value = '';
-            searchResults.style.display = 'none';
-        }
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.search-container')) {
-            searchResults.style.display = 'none';
-        }
-    });
-
-    compareBtn.addEventListener('click', () => {
-        renderVisualizations();
-    });
-
-    clearBtn.addEventListener('click', () => {
-        state.selectedEntrants = [];
-        updateSelectedUI();
-        document.getElementById('visualization-section').classList.add('hidden');
-        document.getElementById('details-section').classList.add('hidden');
-    });
-}
-
-function updateSelectedUI() {
-    const list = document.getElementById('selected-entrants-list');
-    const btn = document.getElementById('compare-btn');
-
-    list.innerHTML = state.selectedEntrants.map(se => `
-        <li class="selected-entrant">
-            ${se.nome} ${se.cognome} (${se.pettorale})
-            <button class="remove-btn" onclick="removeEntrant('${se.pettorale}')">&times;</button>
-        </li>
-    `).join('');
-
-    btn.disabled = state.selectedEntrants.length === 0;
-}
-
-window.removeEntrant = function(bib) {
-    state.selectedEntrants = state.selectedEntrants.filter(se => String(se.pettorale) !== String(bib));
-    updateSelectedUI();
-};
 
 function parseTime(timeStr) {
     if (!timeStr) return null;
@@ -146,10 +61,8 @@ function calculateSegments(entrant) {
     const segments = [];
     let previousTime = null;
 
-    // Checkpoints ordered logic
     const cps = state.checkpoints.sort((a,b) => a.id - b.id);
 
-    // Assume start time is the first checkpoint (Start)
     const firstCp = crono.find(c => c.postazione === cps[0].id);
     let startTime = null;
 
@@ -160,7 +73,7 @@ function calculateSegments(entrant) {
 
     for (let i = 0; i < crono.length; i++) {
         const cpData = crono[i];
-        if (cpData.postazione === cps[0].id) continue; // Skip start as segment since it has 0 duration
+        if (cpData.postazione === cps[0].id) continue;
 
         const cpDef = cps.find(c => c.id === cpData.postazione);
         if (!cpDef) continue;
@@ -190,86 +103,51 @@ function formatDuration(ms) {
     return `${hours}h ${mins}m`;
 }
 
-function renderVisualizations() {
-    if (state.selectedEntrants.length === 0) return;
-
-    const chartSection = document.getElementById('visualization-section');
-    const detailsSection = document.getElementById('details-section');
-    const chart = document.getElementById('chart');
-    const legend = document.getElementById('chart-legend');
-
-    chartSection.classList.remove('hidden');
-    detailsSection.classList.remove('hidden');
-
-    const entrantData = state.selectedEntrants.map(e => ({
-        entrant: e,
-        segments: calculateSegments(e)
-    }));
-
-    let maxTotalTimeMs = 0;
-    entrantData.forEach(d => {
-        const total = d.segments.reduce((sum, seg) => sum + seg.durationMs, 0);
-        if (total > maxTotalTimeMs) maxTotalTimeMs = total;
+function processAndRender() {
+    state.processedData = state.entrants.map(e => {
+        const segments = calculateSegments(e);
+        const totalDurationMs = segments.reduce((sum, seg) => sum + seg.durationMs, 0);
+        return {
+            entrant: e,
+            segments: segments,
+            totalDurationMs: totalDurationMs
+        };
     });
 
-    const allCpIds = new Set();
-    entrantData.forEach(d => d.segments.forEach(seg => allCpIds.add(seg.checkpointId)));
-    const activeCheckpoints = state.checkpoints.filter(cp => allCpIds.has(cp.id));
+    // Sort logic: fastest (posizione 1, 2, 3...) at the top.
+    // If no posizione, put them at the bottom.
+    state.processedData.sort((a, b) => {
+        const posA = (a.entrant.result && a.entrant.result.posizione) ? a.entrant.result.posizione : 999999;
+        const posB = (b.entrant.result && b.entrant.result.posizione) ? b.entrant.result.posizione : 999999;
+        return posA - posB;
+    });
 
-    legend.innerHTML = activeCheckpoints.map((cp, idx) => `
-        <div class="legend-item">
-            <div class="legend-color" style="background-color: ${state.colors[idx % state.colors.length]}"></div>
-            <span>${cp.name}</span>
-        </div>
-    `).join('');
-
-    chart.innerHTML = entrantData.map(d => {
-        const name = `${d.entrant.nome} ${d.entrant.cognome}`;
-        const totalDuration = d.segments.reduce((sum, seg) => sum + seg.durationMs, 0);
-        const formatTotal = formatDuration(totalDuration);
-
-        const segmentsHtml = d.segments.map(seg => {
-            const widthPct = maxTotalTimeMs > 0 ? (seg.durationMs / maxTotalTimeMs) * 100 : 0;
-            const colorIdx = activeCheckpoints.findIndex(cp => cp.id === seg.checkpointId);
-            const color = state.colors[colorIdx % state.colors.length];
-            return `
-                <div class="chart-segment"
-                     style="width: ${widthPct}%; background-color: ${color};"
-                     title="${escapeHtml(name)} -> ${seg.name}: ${formatDuration(seg.durationMs)}">
-                </div>
-            `;
-        }).join('');
-
-        return `
-            <div class="chart-row">
-                <div class="chart-label" title="${escapeHtml(name)} (${formatTotal})">
-                    ${name}
-                    <div style="font-size:0.8em; font-weight:normal; color:#666;">${formatTotal}</div>
-                </div>
-                <div class="chart-bar-container">
-                    ${segmentsHtml}
-                </div>
-            </div>
-        `;
-    }).join('');
-
-    renderTable(entrantData, activeCheckpoints);
+    renderTable(state.processedData);
 }
 
-function renderTable(entrantData, activeCheckpoints) {
+function renderTable(data) {
     const container = document.getElementById('table-container');
 
-    let html = `<table><thead><tr><th>Entrant</th>`;
-    activeCheckpoints.forEach(cp => {
-        html += `<th>To ${cp.name}</th>`;
+    // Determine active checkpoints for headers based on all data
+    const cps = state.checkpoints.sort((a,b) => a.id - b.id);
+    // Remove the Start point (id 1) from columns since it has 0 duration
+    const displayCheckpoints = cps.filter(cp => cp.id !== 1);
+
+    let html = `<table><thead><tr><th>Pos</th><th>Entrant</th>`;
+    displayCheckpoints.forEach(cp => {
+        html += `<th>To ${escapeHtml(cp.name)}</th>`;
     });
-    html += `<th>Total Recorded</th></tr></thead><tbody>`;
+    html += `<th>Total Time</th></tr></thead><tbody id="table-body">`;
 
-    entrantData.forEach(d => {
-        html += `<tr><td><strong>${d.entrant.nome} ${d.entrant.cognome}</strong><br><small>Bib: ${d.entrant.pettorale}</small></td>`;
+    data.forEach(d => {
+        const name = `${d.entrant.nome} ${d.entrant.cognome}`;
+        const pos = (d.entrant.result && d.entrant.result.posizione) ? d.entrant.result.posizione : '-';
+        html += `<tr class="entrant-row" data-search="${escapeHtml(name.toLowerCase())} ${d.entrant.pettorale}">
+            <td>${pos}</td>
+            <td><strong>${escapeHtml(name)}</strong><br><small>Bib: ${escapeHtml(d.entrant.pettorale)}</small></td>`;
+
         let totalMs = 0;
-
-        activeCheckpoints.forEach(cp => {
+        displayCheckpoints.forEach(cp => {
             const seg = d.segments.find(s => s.checkpointId === cp.id);
             if (seg) {
                 totalMs += seg.durationMs;
@@ -279,9 +157,26 @@ function renderTable(entrantData, activeCheckpoints) {
             }
         });
 
-        html += `<td><strong>${formatDuration(totalMs)}</strong></td></tr>`;
+        html += `<td><strong>${totalMs > 0 ? formatDuration(totalMs) : '-'}</strong></td></tr>`;
     });
 
     html += `</tbody></table>`;
     container.innerHTML = html;
+}
+
+function setupSearch() {
+    const searchInput = document.getElementById('search-input');
+
+    searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase().trim();
+        const rows = document.querySelectorAll('.entrant-row');
+
+        rows.forEach(row => {
+            if (term === '' || row.dataset.search.includes(term)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    });
 }
