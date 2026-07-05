@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "START",
+    "distance": "0",
+    "elevation": "0"
+  },
+  {
+    "id": 2,
+    "name": "Arpy",
+    "distance": "12292",
+    "elevation": "843"
+  },
+  {
+    "id": 3,
+    "name": "Rif. Deffeyes",
+    "distance": "24399",
+    "elevation": "2055"
+  },
+  {
+    "id": 4,
+    "name": "La Thuile",
+    "distance": "33887",
+    "elevation": "2204"
+  },
+  {
+    "id": 5,
+    "name": "Baite Youlaz",
+    "distance": "39933",
+    "elevation": "2870"
+  },
+  {
+    "id": 6,
+    "name": "Mont Fortin",
+    "distance": "49124",
+    "elevation": "4062"
+  },
+  {
+    "id": 7,
+    "name": "Lago Combal",
+    "distance": "60257",
+    "elevation": "4215"
+  },
+  {
+    "id": 8,
+    "name": "Rif. Maison Vieille",
+    "distance": "68939",
+    "elevation": "4716"
+  },
+  {
+    "id": 9,
+    "name": "Brenva",
+    "distance": "72983",
+    "elevation": "4726"
+  },
+  {
+    "id": 10,
+    "name": "Skyway IN",
+    "distance": "76171",
+    "elevation": "5333"
+  },
+  {
+    "id": 11,
+    "name": "Skyway OUT",
+    "distance": "76171",
+    "elevation": "5333"
+  },
+  {
+    "id": 12,
+    "name": "Rif. Bonatti",
+    "distance": "87551",
+    "elevation": "6395"
+  },
+  {
+    "id": 14,
+    "name": "Currù",
+    "distance": "94938",
+    "elevation": "7086"
+  },
+  {
+    "id": 16,
+    "name": "FINISH",
+    "distance": "100689",
+    "elevation": "7257"
+  }
+]
