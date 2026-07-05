@@ -63,13 +63,10 @@ function calculateSegments(entrant) {
 
     const cps = state.checkpoints.sort((a,b) => a.id - b.id);
 
-    const firstCp = crono.find(c => c.postazione === cps[0].id);
-    let startTime = null;
-
-    if (firstCp && firstCp.tempo) {
-        startTime = parseTime(firstCp.tempo);
-        previousTime = startTime;
-    }
+    // Official Gun Time for the race start is 2025-07-11T20:00:00+00:00
+    // This is used instead of the runner's pre-start corral scan time.
+    let startTime = parseTime("2025-07-11T20:00:00+00:00");
+    previousTime = startTime;
 
     for (let i = 0; i < crono.length; i++) {
         const cpData = crono[i];
@@ -96,11 +93,12 @@ function calculateSegments(entrant) {
 }
 
 function formatDuration(ms) {
-    if (ms < 0) return '0m';
-    const totalMins = Math.floor(ms / 60000);
-    const hours = Math.floor(totalMins / 60);
-    const mins = totalMins % 60;
-    return `${hours}h ${mins}m`;
+    if (ms < 0) return '00:00:00';
+    const totalSecs = Math.floor(ms / 1000);
+    const hours = Math.floor(totalSecs / 3600);
+    const mins = Math.floor((totalSecs % 3600) / 60);
+    const secs = totalSecs % 60;
+    return `${String(hours).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
 }
 
 function processAndRender() {
@@ -157,7 +155,8 @@ function renderTable(data) {
             }
         });
 
-        html += `<td><strong>${totalMs > 0 ? formatDuration(totalMs) : '-'}</strong></td></tr>`;
+        const officialTotal = totalMs > 0 ? formatDuration(totalMs) : '-';
+        html += `<td><strong>${officialTotal}</strong></td></tr>`;
     });
 
     html += `</tbody></table>`;
