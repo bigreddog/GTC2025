@@ -1,0 +1,533 @@
+{
+  "gara_di_preiscrizione": false,
+  "preiscrizione_per_gara": null,
+  "preiscrizione_per_questa_gara": null,
+  "stats": {
+    "iscritti": 699,
+    "gps": 0,
+    "gps_incasso": 0,
+    "num_refund": 681,
+    "refund_total": 4920,
+    "senza_certificato": 172,
+    "senza_liberatoria": 5,
+    "pettorali_consegnati": 577,
+    "nazioni_presenti": 45,
+    "tesserati": 699,
+    "maschi": 626,
+    "femmine": 73,
+    "nazioni_rappresentate": [
+      {
+        "nazione": "it",
+        "tot": 369,
+        "nazione_iso": "it"
+      },
+      {
+        "nazione": "fr",
+        "tot": 115,
+        "nazione_iso": "fr"
+      },
+      {
+        "nazione": "be",
+        "tot": 36,
+        "nazione_iso": "be"
+      },
+      {
+        "nazione": "gb",
+        "tot": 28,
+        "nazione_iso": "gb"
+      },
+      {
+        "nazione": "de",
+        "tot": 22,
+        "nazione_iso": "de"
+      },
+      {
+        "nazione": "ch",
+        "tot": 19,
+        "nazione_iso": "ch"
+      },
+      {
+        "nazione": "us",
+        "tot": 14,
+        "nazione_iso": "us"
+      },
+      {
+        "nazione": "nl",
+        "tot": 9,
+        "nazione_iso": "nl"
+      },
+      {
+        "nazione": "pt",
+        "tot": 8,
+        "nazione_iso": "pt"
+      },
+      {
+        "nazione": "IT",
+        "tot": 8,
+        "nazione_iso": "it"
+      },
+      {
+        "nazione": "fi",
+        "tot": 6,
+        "nazione_iso": "fi"
+      },
+      {
+        "nazione": "es",
+        "tot": 6,
+        "nazione_iso": "es"
+      },
+      {
+        "nazione": "gr",
+        "tot": 5,
+        "nazione_iso": "gr"
+      },
+      {
+        "nazione": "no",
+        "tot": 3,
+        "nazione_iso": "no"
+      },
+      {
+        "nazione": "dk",
+        "tot": 3,
+        "nazione_iso": "dk"
+      },
+      {
+        "nazione": "se",
+        "tot": 3,
+        "nazione_iso": "se"
+      },
+      {
+        "nazione": "pl",
+        "tot": 3,
+        "nazione_iso": "pl"
+      },
+      {
+        "nazione": "hr",
+        "tot": 3,
+        "nazione_iso": "hr"
+      },
+      {
+        "nazione": "cz",
+        "tot": 3,
+        "nazione_iso": "cz"
+      },
+      {
+        "nazione": "ie",
+        "tot": 2,
+        "nazione_iso": "ie"
+      },
+      {
+        "nazione": "cn",
+        "tot": 2,
+        "nazione_iso": "cn"
+      },
+      {
+        "nazione": "ar",
+        "tot": 2,
+        "nazione_iso": "ar"
+      },
+      {
+        "nazione": "hu",
+        "tot": 2,
+        "nazione_iso": "hu"
+      },
+      {
+        "nazione": "lu",
+        "tot": 2,
+        "nazione_iso": "lu"
+      },
+      {
+        "nazione": "at",
+        "tot": 2,
+        "nazione_iso": "at"
+      },
+      {
+        "nazione": "au",
+        "tot": 2,
+        "nazione_iso": "au"
+      },
+      {
+        "nazione": "si",
+        "tot": 2,
+        "nazione_iso": "si"
+      },
+      {
+        "nazione": "US",
+        "tot": 2,
+        "nazione_iso": "us"
+      },
+      {
+        "nazione": "ro",
+        "tot": 2,
+        "nazione_iso": "ro"
+      },
+      {
+        "nazione": "np",
+        "tot": 1,
+        "nazione_iso": "np"
+      },
+      {
+        "nazione": "lt",
+        "tot": 1,
+        "nazione_iso": "lt"
+      },
+      {
+        "nazione": "BE",
+        "tot": 1,
+        "nazione_iso": "be"
+      },
+      {
+        "nazione": "IE",
+        "tot": 1,
+        "nazione_iso": "ie"
+      },
+      {
+        "nazione": "ca",
+        "tot": 1,
+        "nazione_iso": "ca"
+      },
+      {
+        "nazione": "CH",
+        "tot": 1,
+        "nazione_iso": "ch"
+      },
+      {
+        "nazione": "za",
+        "tot": 1,
+        "nazione_iso": "za"
+      },
+      {
+        "nazione": "vn",
+        "tot": 1,
+        "nazione_iso": "vn"
+      },
+      {
+        "nazione": "sa",
+        "tot": 1,
+        "nazione_iso": "sa"
+      },
+      {
+        "nazione": "ee",
+        "tot": 1,
+        "nazione_iso": "ee"
+      },
+      {
+        "nazione": "JP",
+        "tot": 1,
+        "nazione_iso": "jp"
+      },
+      {
+        "nazione": "PT",
+        "tot": 1,
+        "nazione_iso": "pt"
+      },
+      {
+        "nazione": "pe",
+        "tot": 1,
+        "nazione_iso": "pe"
+      },
+      {
+        "nazione": "GB",
+        "tot": 1,
+        "nazione_iso": "gb"
+      },
+      {
+        "nazione": "sk",
+        "tot": 1,
+        "nazione_iso": "sk"
+      },
+      {
+        "nazione": "ae",
+        "tot": 1,
+        "nazione_iso": "ae"
+      }
+    ],
+    "categorie_rappresentate": [
+      {
+        "categoria": "V1",
+        "tot": 238
+      },
+      {
+        "categoria": "V2",
+        "tot": 231
+      },
+      {
+        "categoria": "SEN",
+        "tot": 170
+      },
+      {
+        "categoria": "V3",
+        "tot": 58
+      },
+      {
+        "categoria": "V4",
+        "tot": 2
+      }
+    ],
+    "da_pagare": 0,
+    "totale_vendita": 114296
+  },
+  "campi_avanzati": {
+    "id": 708,
+    "gara_id": 931,
+    "titolo_mobile": "GTC100",
+    "crono": true,
+    "evento_test": false,
+    "nascondi_lista_iscritti": false,
+    "gara_assicurata": true,
+    "opzioni_assicurazione": "OPT-IN",
+    "productcode": "TKT",
+    "costo_refund_protect": 11,
+    "event_protect": false,
+    "clausole_vessatorie": "<ul><li><strong>art 12 RIMBORSO QUOTE DI ISCRIZIONE |&nbsp;</strong>REFUND OF REGISTRATION FEES</li><li><strong>art 12.2.1 RIMBORSO ORDINARIO |&nbsp;</strong>ORDINARY REFUND</li><li><strong>art 12.2.2 PROGRAMMA REFUND PROTECT DI PROTECT GROUP |&nbsp;</strong>PROTECT GROUP REFUND PROTECT PROGRAM</li><li><strong>art 12.2.3 RIMBORSI NON CUMULABILI |&nbsp;</strong>REFUNDS ARE NOT CUMULATIVE</li><li><strong>art 14 SEMI AUTOSUFFICIENZA |&nbsp;</strong>SEMI SELF-SUFFICIENCY</li><li><strong>art 15 EQUIPAGGIAMENTO |&nbsp;</strong>EQUIPMENT</li><li><strong>art 18 SICUREZZA ED ASSISTENZA MEDICA |&nbsp;</strong>SAFETY AND MEDICAL ASSISTANCE</li><li><strong>art 29 MODIFICHE DEL PERCORSO O DELLE BARRIERE ORARIE – ANNULLAMENTO DELLA CORSA |&nbsp;</strong>CHANGES TO THE ROUTE AND TIME BARRIERS – CANCELLATION OF THE RACE</li><li><strong>art 36 DIRITTO ALL’IMMAGINE |&nbsp;</strong>IMAGE RIGHTS</li><li><strong>art 37 PRIVACY |&nbsp;</strong>PRIVACY</li></ul>",
+    "wording": "<p><strong>[ITA] - TERMINI PER I RIMBORSI / [ENG] - REFUNDABLE WORDING /&nbsp;[FRA] - LIBELLÉ REMBOURSABLE</strong></p><p><strong>[ITALIANO]</strong></p><p>Hai selezionato un acquisto rimborsabile, quindi se non puoi partecipare all'evento a causa di circostanze impreviste al di fuori del tuo controllo, potresti avere diritto a un rimborso - consulta&nbsp;<a href=\"https://refundable.me/extended/vdatrailers/\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>i nostri termini e condizioni</strong></a>. Per richiedere un rimborso,&nbsp;<a href=\"https://refunds.refundprotect.co/\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>fare domanda qui</strong></a>&nbsp;e inserire il codice&nbsp;<strong>REFERENCE</strong>&nbsp;nel modulo per accedere alla prenotazione.</p><p><br></p><p><strong>[ENGLISH]</strong></p><p>You have selected a Refundable purchase therefore if you are unable attend the event due to unforeseen circumstances outside of your control you may be entitled to a refund - please see our&nbsp;<a href=\"https://refundable.me/extended/en/\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>terms and conditions</strong></a>. To apply for a refund please&nbsp;<a href=\"https://refunds.refundprotect.co/\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>apply here</strong></a>&nbsp;and use the following&nbsp;<strong>REFERENCE</strong>&nbsp;in the form to access your booking.</p><p><br></p><p><strong>[FRANCAIS]</strong></p><p>Vous avez sélectionné un achat remboursable, donc si vous n’êtes pas en mesure de participer à l’événement&nbsp;en raison de circonstances imprévues indépendantes de votre volonté, vous pourriez avoir droit à un&nbsp;remboursement.&nbsp;<a href=\"https://refundable.me/extended/fr/\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>Veuillez consulter nos Conditions générales</strong></a>. Veuillez demander un&nbsp;<a href=\"https://refunds.refundprotect.co/\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>remboursement ici</strong></a>&nbsp;et&nbsp;accédez à votre réservation en utilisant la&nbsp;<strong>REFERENCE</strong>&nbsp;suivante dans le formulaire.</p>",
+    "wording_x_email": "<p><strong>[ITALIANO]</strong></p><p>Forniamo a tutti i clienti termini di rimborso evoluti su tutte le nostre prenotazioni. Per visualizzare la nostra serie completa di termini rimborsabili estesi&nbsp;<a href=\"https://refundable.me/extended/vdatrailers/\" rel=\"noopener noreferrer\" target=\"_blank\">clicca qui</a>.</p><p>Se non sei in grado di partecipare all'evento a causa di circostanze impreviste al di fuori del tuo controllo, potresti avere diritto a un rimborso - consulta i nostri Termini e condizioni rimborsabili cliccando sul link sopra. Per richiedere un rimborso&nbsp;<a href=\"https://refunds.refundprotect.co/\" rel=\"noopener noreferrer\" target=\"_blank\">clicca qui</a>&nbsp;e inserisci il codice REFERENCE che troverai nella mail di conferma.</p><p>Se il motivo del rimborso non si trova nei Termini e condizioni rimborsabili di cui sopra, si prega di contattare la&nbsp;<a href=\"mailto:info@vdatrailers.it\" rel=\"noopener noreferrer\" target=\"_blank\">segreteria</a>.</p><p>&nbsp;</p><p><br></p><p><strong>[ENGLISH]</strong></p><p>We provide all customers enhanced refund terms on all our bookings. To view our full set of extended Refundable terms please&nbsp;<a href=\"https://refundable.me/extended/en/\" rel=\"noopener noreferrer\" target=\"_blank\">click here</a>.</p><p>If you are unable to attend your booking due to unforeseen circumstances outside of your control you may be entitled to a refund – please see our Refundable Terms and Conditions above. To apply for a refund please&nbsp;<a href=\"https://refunds.refundprotect.co/\" rel=\"noopener noreferrer\" target=\"_blank\">apply here</a>&nbsp;and use the reference code you will find in the confirmation email.</p><p>Should your reason for refund not be found in the Refundable Terms and Conditions above, please get in contact with our standard&nbsp;<a href=\"mailto:info@vdatrailers.it\" rel=\"noopener noreferrer\" target=\"_blank\">customer service team</a>.</p><p>&nbsp;</p><p><br></p><p><strong>[FRANCAIS]</strong></p><p>Nous offrons à tous nos clients des conditions de remboursement améliorées pour toutes nos réservations. Pour consulter notre ensemble complet de conditions remboursables étendues,&nbsp;<a href=\"https://refundable.me/extended/fr/\" rel=\"noopener noreferrer\" target=\"_blank\">cliquez ici</a>.</p><p>Si vous ne pouvez pas assister à votre réservation en raison de circonstances imprévues indépendantes de votre volonté, vous pourriez avoir droit à un remboursement - veuillez consulter nos Conditions générales remboursables ci-dessus. Pour demander un remboursement,&nbsp;<a href=\"https://refunds.refundprotect.co/\" rel=\"noopener noreferrer\" target=\"_blank\">cliquez ici</a>.</p><p>Si le motif du remboursement ne figure pas dans les conditions générales de remboursement ci-dessus, veuillez contacter notre&nbsp;<a href=\"mailto:info@vdatrailers.it\" rel=\"noopener noreferrer\" target=\"_blank\">service clientèle standard</a>.</p>",
+    "gps_esterno": false,
+    "gps_esterno_costo": 0,
+    "gps_esterno_descrizione": null,
+    "beebee_json": "https://www.100x100trail.com/json/GTC1002025.json",
+    "url_static_ranking": null,
+    "url_sponsor": "<p>https://www.endurancetrail.org/dev/rankings/#/race/2025GTC100KM</p>",
+    "geojson": "https://www.endurancetrail.org/geojson/GTC1002025.json",
+    "traccia_kml": null,
+    "gara_con_preiscrizione": false,
+    "pax": 100,
+    "link_regolamento": "https://www.gtcourmayeur.com/en/regulation/",
+    "link_al_pagamento": null,
+    "links": "https://itra.run/Races/RaceDetails/GRAN.TRAIL.COURMAYEUR.GTC.100.Km/2025/97785",
+    "html_embed": "<iframe class=\"ql-video\" frameborder=\"0\" allowfullscreen=\"true\" src=\"https://my.experience.torxtrail.com/mappe/GTC100-2023-GPX-MAP.html\"></iframe><p><br></p>",
+    "max_iscritti": 700,
+    "apertura_iscrizioni": "2024-11-29T11:00:00+00:00",
+    "chiusura_iscrizioni": "2025-06-15T00:00:00+00:00",
+    "trail_type": "Trail Ultra",
+    "start_time": "2025-07-11 22:00:00+02",
+    "distance": 100,
+    "elevation": 7900,
+    "time_limit": 33,
+    "itra": 5,
+    "nr_componenti_team": 1,
+    "moltiplicatore": "0",
+    "background_color": null,
+    "heading_color": null,
+    "accetta_iscritti_pax": false,
+    "pettorali_solidali": false,
+    "solidale_price": 0,
+    "solidale_description": null,
+    "solidale_max_iscritti": 0,
+    "pettorali_eco": false,
+    "eco_description": null,
+    "eco_price": 0,
+    "eco_max_iscritti": 0,
+    "eco_iscrizioni_on": null,
+    "eco_iscrizioni_off": null,
+    "solidale_iscrizioni_on": null,
+    "solidale_iscrizioni_off": null,
+    "descrizione_gara": null,
+    "liberatoria_it": "<p><strong>Dichiarazione assunzione del rischio ed esonero di responsabilità</strong></p><p>&nbsp;</p><p><strong>Dopo aver attentamente letto il regolamento della manifestazione ed a conoscenza delle difficoltà del percorso, nonché consapevole dei rischi per l’incolumità personale connessi alla competizione, con la firma del presente modulo dichiaro che:</strong></p><ul><li>sono cosciente della lunghezza e della specificità della prova che si sviluppa in montagna, in possibili condizioni climatiche difficili (notte, freddo, vento, pioggia, neve), e che è necessaria una preparazione ed una reale capacità&nbsp;d’autonomia personale;</li><li>sono informato delle controindicazioni mediche che mi riguardano e che, di conseguenza, sollevo l’organizzazione da qualsiasi tipo di responsabilità per problemi medici che potrebbero accadermi durante la corsa.</li><li>non faccio uso di sostanze dopanti;</li><li>sono consapevole che sottovalutare la preparazione psico-fisica, l’abbigliamento e l’attrezzatura può portare a conseguenze estreme, anche letali;</li><li>mi impegno a portare con me, durante tutta la durata della competizione, il materiale obbligatorio;</li><li>sono consapevole che i cambiamenti meteorologici in montagna possono essere repentini, localizzati e violenti;</li><li>sono consapevole che in montagna il materiale generalmente utilizzato per il trail running potrebbe non essere adeguato per affrontare le basse temperature, la pioggia, il vento, il fango, la neve e il ghiaccio;</li><li>accetto i controlli del materiale obbligatorio che potranno essere effettuati in ogni momento della corsa e di essere a conoscenza che la Direzione di Gara potrà decidere a proprio insindacabile giudizio di fermare i corridori che risulteranno non adeguatamente attrezzati;</li><li>esonero l’organizzazione VDA Trailers s.s.d.r.l., il direttore di gara ed il responsabile del percorso da ogni e qualsiasi responsabilità per danni subiti da cose e persone, compresi infortuni personali e/o morte.</li><li>mi assumo piena ed esclusiva responsabilità per danni eventualmente da me cagionati a terzi o a beni di proprietà di terzi.</li><li>rinuncio espressamente a ogni pretesa e ad ogni diritto d'autore sulle foto scattate durante la gara ed inoltre rinuncio a qualsiasi ricorso contro l'organizzatore ed i suoi partner autorizzati per il libero utilizzo, senza limiti, della mia immagine.</li><li>dichiaro di aver preso visione della Privacy Policy e autorizzo VDA Trailers s.s.d.r.l. trattare i miei dati personali esclusivamente per finalità strumentali alla propria attività e improntate a principi di onestà e liceità secondo quanto previsto dalla normativa vigente.</li><li>sono consapevole del fatto che è espressamente vietato diffondere a fini commerciali e/o promozionali, attraverso qualsiasi mezzo (web, social network, TV, giornali, riviste, ecc.), immagini (video o foto) riprese durante l’evento senza l’autorizzazione scritta da parte dell’Organizzazione (VDA Trailers s.s.d.r.l.). GTC®, GTC30™, GTC55™, GTC100™, Gran Trail Courmayeur™ sono marchi di proprietà o in uso esclusivo di VDA Trailers. Tutte le comunicazioni inerenti la manifestazione o l’utilizzo di immagini della stessa dovranno essere fatte nel rispetto del nome dell’evento e dei marchi depositati, previo accordo con l’Organizzazione.</li></ul><p><br></p><p><strong>IMPORTANTE: La versione originale del documento è redatta in italiano. In caso di incongruenze o discrepanze con le versioni nelle altre lingue sarà la versione italiana ad prevalere sulle altre.</strong></p><p><br></p><p><strong>Letto, confermato e sottoscritto</strong></p>",
+    "liberatoria_en": "<p><strong>Liability disclaimer and declaration of assumption of risk</strong></p><p>&nbsp;</p><p><strong>After having carefully read the regulations of the event and having acknowledged the difficulties of the course, and being aware of the risks to personal safety connected with the race, by signing this document I declare:&nbsp;</strong></p><p>&nbsp;</p><p>to be totally aware of the unusual length and peculiarities of the race that takes place in the mountains, in possible difficult climatic conditions (night, cold, wind, rain, snow), and that preparation and real personal autonomy is required;</p><ul><li>I am aware of the medical contraindications that concern me and consequently raise the organization from any kind of responsibility for medical problems that could happen during the race;</li><li>I don't use doping substances;</li><li>I am aware that underestimate the mental and physical training, clothing and equipment can lead to extreme consequences or death;</li><li>I pledge to bring with me, throughout the duration of the competition, the compulsory equipment;</li><li>I am aware&nbsp;that changes in the weather can be sudden and violent in the mountains, and can occur in localised spots;</li><li>I am aware&nbsp;that equipment that is sufficient for trail running in general may not be adequate for the low temperatures, rain, wind, mud, snow and ice that you will find in the mountains;</li><li>I accept the checks on the compulsory equipment, which can be carried out at any time during the race; I am aware that the Race Direction may decide, at its sole discretion, to stop the athletes who are not adequately equipped;</li><li>I exempt the organization VDA Trailers s.s.d.r.l., the Race Director and the Course Manager from any and all liability for damage suffered by me caused by things and people, including personal injury and / or death.</li><li>I take full and exclusive responsibility for any damage I caused to third parties or to property owned by third parties.</li><li>I expressly renounce to any claim and to any copyright on pictures taken during the race and in addition I renounce any appeal against the organizer and its authorized partners for the free use, without limits, of my image.</li><li>I declare to have read the Privacy Policy and I authorize VDA Trailers s.s.d.r.l. to treat my personal data exclusively for purposes that are instrumental to its activity and based on principles of honesty and lawfulness in accordance with of the current regulations.</li><li>I am aware that any dissemination for commercial / promotional purposes of photographic or video images captured during the event, via any means (internet, social networks, TV, press, magazines, etc.), without written authorisation from the organisation is prohibited. GTC®, GTC30™, GTC55™, GTC100™, Gran Trail Courmayeur™ are trademarks owned or used exclusively by VDA Trailers. Any communication of the event or use of images of it must be done in observance of the name of the event and registered trademarks, subject to agreement by the organisation.</li></ul><p><br></p><p><strong>IMPORTANT: The original version of the document is written in Italian. In case of inconsistencies or discrepancies with the versions in other languages, the Italian version will prevail over the others.</strong></p><p>&nbsp;</p><p><strong>Read, confirmed and signed</strong></p>",
+    "liberatoria_fr": "<p><strong>Déclaration de décharge de responsabilité</strong></p><p>&nbsp;</p><p><strong>Après avoir lu attentivement les règles de l’événement et conscient des difficultés et des risques pour la sécurité des personnes liées à la compétition, je déclare:</strong></p><ul><li>d’être absolument conscient de la longueur du parcours et de ses spécificités de la course qui se développe en montagne, dans d'éventuelles conditions climatiques difficiles (nuit, froid, vent, pluie, neige), et qu'une préparation et une réelle autonomie personnelle sont nécessaires ;</li><li>d'être renseigné sur les contre-indications médicales qui pourraient me concerner et, par conséquent, je décharge l'organisation de toute responsabilité en cas de problème médical pouvant survenir pendant la course;</li><li>de ne pas utiliser de produit dopant</li><li>d’être conscient que sous-estimer la préparation psychophysique, les vêtements et l’équipement peut avoir des conséquences extrêmes, voire fatales!</li><li>Je m'engage à apporter le matériel obligatoire avec moi pendant toute la durée de la course;</li><li>d’être absolument conscient&nbsp;qu’en montagne les changements météorologiques peuvent être soudains, localisés et violents ;</li><li>d’être absolument conscient&nbsp;qu’en montagne, le matériel généralement utilisé pour le trail running peut ne pas être adapté pour faire face aux basses températures, à la pluie, au vent, à la boue, à la neige et à la glace;</li><li>J'accepte les contrôles du \"matériel obligatoire\" qui peuvent être effectués à tout moment pendant la course et que je suis conscient que la Direction de Course peut décider à sa seule discrétion d'arrêter les coureurs qui ne sont pas équipés adéquatement;</li><li>J'exonère l'organisation de VDA Trailers s.s.d.r.l., le directeur de course et le responsable du parcours de toute responsabilité pour les dommages subis, causés par des choses et des personnes, y compris des blessures et / ou la mort;</li><li>J'assume la responsabilité entière et exclusive de tout dommage causé par moi à des tiers ou à des biens appartenant à des tiers.</li><li>Je renonce expressément à tout droit à l'image pendant la course, ainsi qu’à tout recours contre l'organisation et ses partenaires, pour l’utilisation d’ image photos et vidéos , qui me représentent pendant la course.&nbsp;</li><li>Je déclare avoir pris connaissance de la Privacy Policy et d’autoriser VDA Trailers s.s.d.r.l. à utiliser mes données personnelles uniquement dans le cadre de son activité et ce de manière légale, conformément à la Loi en vigueur.</li><li>d’être conscient que il est expressément interdit de diffuser, par quelque moyen que ce soit (Internet, réseaux sociaux, télévision, journaux, magazines, etc.), à des fins commerciales, des images (vidéos ou photos) prises lors de l’événement sans l’autorisation écrite de l’Organisation. GTC®, GTC30™, GTC55™, GTC100™, Gran Trail Courmayeur™ sont des marques déposées détenues ou utilisées exclusivement par VDA Trailers. Toutes les communications sur la manifestation ou l’utilisation d’images de celle-ci doivent être effectuées conformément au nom de l’événement et des marques déposées, sous réserve d’un accord avec l’Organisation.</li></ul><p><br></p><p><strong>IMPORTANT: la version originale du document est rédigée en italien. En cas d'incohérences ou de divergences avec les versions dans d'autres langues, la version italienne prévaudra sur les autres.</strong></p><p>&nbsp;</p><p><strong>Lu et approuvé</strong></p>",
+    "gara_experience": false,
+    "eta_minima": 18,
+    "hide_frontend": false,
+    "special_bib_for": 0,
+    "categorie_gara": [
+      {
+        "active": true,
+        "titolo_mobile": "GTC100",
+        "price": 160,
+        "description": "GTC100 - Gran Trail Courmayeur 2025",
+        "max_iscritti": 700,
+        "iscritti_attuali": 699
+      },
+      {
+        "active": false,
+        "titolo_mobile": "GTC100 CHARITY BIBS",
+        "price": 0,
+        "description": null,
+        "max_iscritti": 0,
+        "iscritti_attuali": null
+      },
+      {
+        "active": false,
+        "titolo_mobile": "GTC100 ECO BIBS",
+        "price": 0,
+        "description": null,
+        "max_iscritti": 0,
+        "iscritti_attuali": null
+      }
+    ],
+    "cover_url": "torxtrail/122625/931/MAIL_GTC100.pngthumb",
+    "cover_type": "png",
+    "cover_name": "MAIL_GTC100.png"
+  },
+  "postazioni": [
+    {
+      "id": 652,
+      "text": "START",
+      "rank": 1,
+      "quota": "1219",
+      "dislivello": "0",
+      "distanza": "0",
+      "latitudine": "45.791679",
+      "longitudine": "6.972500",
+      "pid": null,
+      "postazione_nascosta": null
+    },
+    {
+      "id": 653,
+      "text": "Arpy",
+      "rank": 2,
+      "quota": "1697",
+      "dislivello": "843",
+      "distanza": "12292",
+      "latitudine": "45.746298",
+      "longitudine": "7.008870",
+      "pid": null,
+      "postazione_nascosta": null
+    },
+    {
+      "id": 654,
+      "text": "Rif. Deffeyes",
+      "rank": 3,
+      "quota": "2486",
+      "dislivello": "2055",
+      "distanza": "24399",
+      "latitudine": "45.675456",
+      "longitudine": "6.986027",
+      "pid": null,
+      "postazione_nascosta": null
+    },
+    {
+      "id": 655,
+      "text": "La Thuile",
+      "rank": 4,
+      "quota": "1460",
+      "dislivello": "2204",
+      "distanza": "33887",
+      "latitudine": "45.715445",
+      "longitudine": "6.950043",
+      "pid": null,
+      "postazione_nascosta": null
+    },
+    {
+      "id": 656,
+      "text": "Baite Youlaz",
+      "rank": 5,
+      "quota": "2033",
+      "dislivello": "2870",
+      "distanza": "39933",
+      "latitudine": "45.743733",
+      "longitudine": "6.939236",
+      "pid": null,
+      "postazione_nascosta": null
+    },
+    {
+      "id": 657,
+      "text": "Mont Fortin",
+      "rank": 6,
+      "quota": "2726",
+      "dislivello": "4062",
+      "distanza": "49124",
+      "latitudine": "45.763485",
+      "longitudine": "6.870436",
+      "pid": null,
+      "postazione_nascosta": null
+    },
+    {
+      "id": 658,
+      "text": "Lago Combal",
+      "rank": 7,
+      "quota": "1969",
+      "dislivello": "4215",
+      "distanza": "60257",
+      "latitudine": "45.769558",
+      "longitudine": "6.852453",
+      "pid": null,
+      "postazione_nascosta": null
+    },
+    {
+      "id": 659,
+      "text": "Rif. Maison Vieille",
+      "rank": 8,
+      "quota": "1956",
+      "dislivello": "4716",
+      "distanza": "68939",
+      "latitudine": "45.790887",
+      "longitudine": "6.931139",
+      "pid": null,
+      "postazione_nascosta": null
+    },
+    {
+      "id": 660,
+      "text": "Brenva",
+      "rank": 9,
+      "quota": "1377",
+      "dislivello": "4726",
+      "distanza": "72983",
+      "latitudine": "45.817354",
+      "longitudine": "6.948376",
+      "pid": null,
+      "postazione_nascosta": null
+    },
+    {
+      "id": 661,
+      "text": "Skyway IN",
+      "rank": 10,
+      "quota": "2169",
+      "dislivello": "5333",
+      "distanza": "76171",
+      "latitudine": "45.829397",
+      "longitudine": "6.950143",
+      "pid": null,
+      "postazione_nascosta": null
+    },
+    {
+      "id": 662,
+      "text": "Skyway OUT",
+      "rank": 11,
+      "quota": "2169",
+      "dislivello": "5333",
+      "distanza": "76171",
+      "latitudine": "45.829397",
+      "longitudine": "6.950143",
+      "pid": null,
+      "postazione_nascosta": null
+    },
+    {
+      "id": 663,
+      "text": "Rif. Bonatti",
+      "rank": 12,
+      "quota": "2025",
+      "dislivello": "6395",
+      "distanza": "87551",
+      "latitudine": "45.846856",
+      "longitudine": "7.033409",
+      "pid": null,
+      "postazione_nascosta": null
+    },
+    {
+      "id": 665,
+      "text": "Currù",
+      "rank": 14,
+      "quota": "2022",
+      "dislivello": "7086",
+      "distanza": "94938",
+      "latitudine": "45.810180",
+      "longitudine": "7.012305",
+      "pid": null,
+      "postazione_nascosta": null
+    },
+    {
+      "id": 668,
+      "text": "FINISH",
+      "rank": 16,
+      "quota": "1219",
+      "dislivello": "7257",
+      "distanza": "100689",
+      "latitudine": "45.793895",
+      "longitudine": "6.970959",
+      "pid": null,
+      "postazione_nascosta": null
+    }
+  ]
+}
