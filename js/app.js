@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function loadData() {
     try {
         const [iscrittiRes, classificheRes, checkpointsRes] = await Promise.all([
-            fetch('data/iscritti_1133.json'),
-            fetch('data/classifiche_1133.json'),
+            fetch('data/iscritti_931.json'),
+            fetch('data/931.json'),
             fetch('data/checkpoints.json')
         ]);
 
